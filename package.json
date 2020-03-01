@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "firebase": "^7.8.2",
+    "framer-motion": "^1.8.4",
     "next": "9.2.2",
     "react": "16.12.0",
     "react-dom": "16.12.0"

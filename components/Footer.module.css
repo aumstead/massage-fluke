@@ -1,0 +1,149 @@
+.container {
+  background-color: var(--color-light-gray);
+  height: max-content;
+}
+.grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, max-content);
+  justify-items: center;
+}
+.logo {
+  height: 10rem;
+  /* width: max-content; */
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  display: block;
+}
+.heading {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+/* /////////////////////////////////////////////// */
+/* contact column */
+/* /////////////////////////////////////////////// */
+.phoneContainer {
+  display: flex;
+  align-content: center;
+  margin-bottom: 2rem;
+}
+.emailContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.wechatContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.addressContainer {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 2rem;
+}
+
+
+.phoneNumber {
+  font-size: 2rem;
+  margin-left: 2rem;
+  font-weight: 800;
+}
+.email {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-left: 2rem;
+  transition: color .2s;
+}
+.email:hover {
+  color: var(--color-hover);
+}
+.wechatNumber {
+  font-size: 2rem;
+  margin-left: 2rem;
+  font-weight: 800;
+}
+.address {
+  font-size: 1.6rem;
+  margin-left: 2rem;
+}
+/* /////////////////////////////////////////////// */
+/* quick links column */
+/* /////////////////////////////////////////////// */
+.quickLinksContainer {
+  grid-column: 2;
+}
+.nav__ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+.nav__li {
+  margin-bottom: 2rem;
+}
+.nav__a {
+  font-size: 1.8rem;
+  font-family: var(--font-sans);
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.nav__a:hover {
+  color: var(--color-hover);
+}
+/* /////////////////////////////////////////////// */
+/* bottom content */
+/* /////////////////////////////////////////////// */
+.bottomContainer {
+  height: 8rem;
+  width: 100vw;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.bottomContent {
+  max-width: 1100px;
+  display: flex;
+  margin: 0 auto;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottomCopyright {
+  font-size: 1.2rem;
+  
+}
+
+.bottomAttribution {
+  font-size: 1.2rem;
+  justify-self: flex-end;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    padding-left: 5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+  }
+  .quickLinksContainer {
+    margin-top: 2rem;
+  }
+  .bottomContent {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

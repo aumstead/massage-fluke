@@ -1,0 +1,43 @@
+:root {
+  --color-primary: #2c786c;
+  --color-background: #f9fcfb;
+  --color-secondary: #f75f00; 
+  --color-light-black: #393e46;
+  --color-dark-gray: gray;
+  --color-primary-light: #529188;
+  --color-light-gray: #f2f4f3;
+  --color-hover: #73c1b5;
+  --color-secondary-hover: #ff9d61;
+
+  --font-sans: 'Red Hat Text', 'Arial';
+  --font-serif: 'Quando', 'serif';
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: inherit;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-sans);
+  color: var(--color-light-black);
+}
+
+button:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 50%;
+  }
+}

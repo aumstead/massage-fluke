@@ -1,0 +1,207 @@
+.container {
+  max-width: 1100px;
+  display: block;
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.heading {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+.subheading {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.anchor {
+  display: block;
+  position: relative;
+  top: -10rem;
+  visibility: hidden;
+}
+.h2 {
+  font-size: 2.6rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+}
+/* list headings */
+.h4 {
+  font-size: 1.2rem;
+}
+.text {
+  font-size: 1.6rem;
+}
+
+.image {
+  width: 35rem;
+  float: left;
+  margin-right: 4rem;
+  margin-bottom: 3rem;
+}
+
+.bowenConditions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.sculo__1 {
+  width: 18rem;
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+.sculo__2 {
+  width: 18rem;
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+.respiratory {
+  width: 18;
+  grid-column: 3;
+  grid-row: 1;
+}
+.digestive {
+  width: 18;
+  grid-column: 4;
+  grid-row: 1;
+}
+.gyne {
+  width: 18;
+  grid-column: 3;
+  grid-row: 2;
+}
+.also {
+  grid-column: 4;
+  grid-row: 2;
+}
+.ul {
+  list-style: none;
+  font-size: 1.4rem;
+}
+
+.thaiOil {
+  margin-top: 10rem;
+  overflow: auto;
+  margin-bottom: 6rem;
+}
+.thaiFoot {
+  display: block;
+  overflow: auto;
+  margin-bottom: 6rem;
+}
+.reiki {
+  overflow: auto;
+  margin-bottom: 6rem;
+}
+.mongolian {
+  overflow: auto;
+  margin-bottom: 6rem;
+}
+.acupressure {
+  overflow: auto;
+  margin-bottom: 6rem;
+}
+
+.pets {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+}
+.petsGrid {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: 1;
+  column-gap: 5rem;
+}
+.pets__left {
+  grid-column: 1;
+  grid-row: 1;
+}
+.pets__right {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.petsImage__1 {
+  width: 25rem;
+  margin-bottom: 3rem;
+}
+.petsImage__2 {
+  width: 25rem;
+  margin-bottom: 3rem;
+}
+.petsImage__3 {
+  width: 25rem;
+}
+
+@media only screen and (max-width: 675px) {
+  .bowenConditions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content max-content max-content;
+    row-gap: 2rem;
+  }
+  .image {
+    max-width: 80vw;
+  }
+  .sculo__1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .sculo__2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .respiratory {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .digestive {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .gyne {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .also {
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .petsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1;
+    column-gap: 5rem;
+  }
+  .pets__right {
+    grid-column: 1;
+    display: flex;
+    flex-direction: unset;
+    justify-content: space-around;
+    margin-top: 3rem;
+  }
+  .petsImage__1 {
+    display: none;
+  }
+  .petsImage__2 {
+    display: none;
+  }
+  .petsImage__3 {
+    display: block;
+  }
+  .thaiOil {
+    margin-top: 4rem;
+  }
+  .image {
+    display: block;
+    float: unset;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}

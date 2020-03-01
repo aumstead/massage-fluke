@@ -1,0 +1,89 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.iconsContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flexItem__share {
+  display: grid;
+  justify-items: center;
+}
+
+.flexItem__account {
+  display: grid;
+  justify-items: center;
+}
+
+.flexItem__write {
+  display: grid;
+  justify-items: center;
+}
+
+.h3 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.buttonsContainer {
+  margin: 0 auto;
+  display: flex;
+  width: max-content;
+  align-items: center;
+  margin-top: 4rem;
+}
+.btn {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+}
+/* .btn__login {
+  color: var(--color-secondary);
+  transition: all .5s ease;
+  font-size: 1.6rem;
+  text-decoration: none;
+  position: relative;
+  margin-right: 3rem;
+}
+.btn__login:after{
+  content: '';
+  display: block;
+  margin: auto;
+	height: 2px;
+	width: 0px;
+  background: var(--color-secondary);
+  transition: width .5s;
+}
+.btn__login:hover:after {
+  width: 100%;
+} */
+.btn__login {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  color: var(--color-secondary);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-secondary);
+  border-radius: 3px;
+  margin-right: 4rem;
+  transition: all .2s;
+}
+.btn__login:hover {
+  color: var(--color-background);
+  background-color: var(--color-secondary);
+}
+.btn__account {
+  color: var(--color-background);
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  border-radius: 3px;
+  transition: all .2s;
+}
+.btn__account:hover {
+  color: var(--color-secondary);
+  background-color: var(--color-background);
+}

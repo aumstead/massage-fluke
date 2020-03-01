@@ -1,0 +1,85 @@
+.heroContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.background {
+  grid-column: 1;
+  grid-row: 1;
+  min-height: 100vh;
+  background-color: white;
+  background-image: url('/images/back1.jpg');
+  background-size: cover;
+  background-position: 90% 50%;
+  background-blend-mode: luminosity;
+  opacity: .3;
+  z-index: -1;
+}
+.left {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-rows: 25% 1fr;
+  justify-content: center;
+  text-align: center;
+  
+}
+.leftContent {
+  grid-row: 2;
+  max-width: max-content;
+}
+
+.h1 {
+  font-size: 6rem;
+  font-family: var(--font-sans);
+  color: var(--color-primary);
+  width: 100%;
+}
+.subheading {
+  font-size: 3rem;
+  font-family: var(--font-sans);
+  color: var(--color-light-black);
+}
+.photo {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+.cta {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  width: max-content;
+  padding: 1.5rem 3rem;
+  font-size: 1.6rem;
+  border: 2px solid var(--color-primary);
+  margin: 0 auto;
+  margin-top: 4rem;
+  display: block;
+  border-radius: 3px;
+}
+.cta:hover {
+  cursor: pointer;
+  color: var(--color-primary);
+  background-color: transparent;
+}
+.right {
+  grid-column: 2;
+}
+
+@media (orientation: portrait) {
+  .background {
+    /* grid-column: 1;
+    grid-row: 1; */
+    min-height: 75vh;
+    background-color: white;
+    background-image: url('/images/back1.jpg');
+    background-size: cover;
+    background-position: 90% 50%;
+    background-blend-mode: luminosity;
+    opacity: .3;
+    z-index: -1;
+  }
+}
