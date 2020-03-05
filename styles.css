@@ -6,7 +6,7 @@
   --color-dark-gray: gray;
   --color-primary-light: #529188;
   --color-light-gray: #f2f4f3;
-  --color-hover: #73c1b5;
+  --color-hover: #38ad9b;
   --color-secondary-hover: #ff9d61;
 
   --font-sans: 'Red Hat Text', 'Arial';
@@ -36,6 +36,12 @@ button:focus {
   outline: none;
 }
 
+.ql-editor {
+  min-height: 300px;
+}
+.ql-container {
+  font-size: 14px;
+}
 @media only screen and (max-width: 1100px) {
   html {
     font-size: 50%;

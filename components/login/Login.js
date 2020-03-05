@@ -1,76 +1,76 @@
 import { useState, useEffect } from "react";
-import firebase from "../../firebase"
-import {useRouter} from "next/router"
+import firebase from "../../firebase";
+import { useRouter } from "next/router";
+import Link from "next/link";
+
+import styles from "./Login.module.css";
 
 // logic begins in form input fields as user types.
 function Login() {
   const router = useRouter();
 
-  const [login, setLogin] = useState(true);
-  const [errors, setErrors] = useState({})
-  const [isSubmitting, setSubmitting] = useState(false)
+  // see if user is logged in and if so push to /blog/create
+  firebase.auth.onAuthStateChanged(function(user) {
+    if (user) {
+      router.push('/blog/create')
+    } 
+  });
+
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setSubmitting] = useState(false);
   const [values, setValues] = useState({
-    name: "",
     email: "",
     password: ""
   });
-  const [firebaseError, setFirebaseError] = useState(null)
+  const [firebaseError, setFirebaseError] = useState(null);
 
   useEffect(() => {
-    if(isSubmitting) {
-      const noErrors = Object.keys(errors).length === 0
+    if (isSubmitting) {
+      const noErrors = Object.keys(errors).length === 0;
       if (noErrors) {
-        authenticateUser()
-        setSubmitting(false)
+        authenticateUser();
+        setSubmitting(false);
       } else {
-        setSubmitting(false)
+        setSubmitting(false);
       }
     }
-  }, [errors])
+  }, [errors]);
 
   async function authenticateUser() {
-    const {name, email, password} = values;
+    const { email, password } = values;
     try {
-      login 
-        ? await firebase.login(email, password)
-        : await firebase.register(name, email, password)
-      router.push("/blog/create")
+      await firebase.login(email, password)
+      router.push("/blog/create");
     } catch (error) {
-      console.error("Authentication error", error)
-      setFirebaseError(error.message)
+      console.error("Authentication error", error);
+      setFirebaseError(error.message);
     }
   }
 
   function validateLogin(values) {
-    let errors = {}
+    let errors = {};
 
     // email errors
-    if(!values.email) {
-      errors.email = "Email required"
-    } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-      errors.email = "Invalid email address"
+    if (!values.email) {
+      errors.email = "Email is required.";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+      errors.email = "Invalid email address.";
     }
     // password errors
     if (!values.password) {
-      errors.password = "Password required"
+      errors.password = "Password is required.";
     } else if (values.password.length < 6) {
-      errors.password = "Password must be at least 6 characters"
+      errors.password = "Password must be at least 6 characters.";
     }
 
     return errors;
   }
 
-  function handleBlur() {
-    const validationErrors = validateLogin(values)
-    setErrors(validationErrors)
-  }
-
-  
   function handleSubmit(event) {
     event.preventDefault();
-    const validationErrors = validateLogin(values)
-    setErrors(validationErrors)
-    setSubmitting(true)
+    const validationErrors = validateLogin(values);
+    setErrors(validationErrors);
+    setSubmitting(true);
   }
 
   function handleChange(event) {
@@ -81,48 +81,46 @@ function Login() {
   }
 
   return (
-    <div>
-      <h2>{login ? "Login" : "Create Account"}</h2>
-      <form onSubmit={handleSubmit}>
-        {!login && (
-          <input
-            type="text"
-            name={'name'}
-            value={values.name}
-            placeholder="Your name"
-            onChange={handleChange}
-            
-          />
-        )}
+    <div className={styles.container}>
+      <div className={styles.space}></div>
+      <h2 className={styles.h2}>Login</h2>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <p className={`${styles.text} ${styles.enter}`}>Enter your email address and password.</p>
         <input
           type="email"
-          name={'email'}
+          name={"email"}
           value={values.email}
-          placeholder="Your email"
+          placeholder="Email"
           onChange={handleChange}
-          onBlur={handleBlur}
+          className={`${styles.input}`}
         />
-        {errors.email && <p>{errors.email}</p>}
+        {errors.email && <p className={styles.error}>{errors.email}</p>}
         <input
           type="password"
-          name={'password'}
+          name={"password"}
           value={values.password}
-          placeholder="Your password"
+          placeholder="Password"
           onChange={handleChange}
-          onBlur={handleBlur}
+          className={`${styles.input} ${styles.passwordInput}`}
         />
-        {errors.password && <p>{errors.password}</p>}
-        {firebaseError && <p>{firebaseError}</p>}
+        {errors.password && <p className={styles.error}>{errors.password}</p>}
+        {firebaseError && <p className={styles.error}>{firebaseError}</p>}
+        <Link href='/forgot'><a className={styles.forgot}>Forgot your password?</a></Link>
         <div>
-          <button type="submit" disabled={isSubmitting}>Submit</button>
           <button
-            type="button"
-            onClick={() => setLogin(prevLogin => !prevLogin)}
+            type="submit"
+            disabled={isSubmitting}
+            className={styles.button}
           >
-            {login
-              ? "I need to create an account."
-              : "I already have an account."}
+            Submit
           </button>
+          <p className={`${styles.text} ${styles.signup}`}>
+            Don't have a blog account yet?{" "}
+            <Link href="/signup">
+              <a className={styles.link}>Sign up</a>
+            </Link>
+          </p>
+          
         </div>
       </form>
     </div>

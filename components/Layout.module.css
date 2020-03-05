@@ -53,6 +53,14 @@
 .right__a:hover {
   color: var(--color-secondary-hover);
 }
+.logoutBtn {
+  background-color: var(--color-background);
+  border: none;
+}
+.logoutBtn:hover {
+  cursor: pointer;
+  color: var(--color-secondary-hover);
+}
 .button__a {
   text-decoration: none;
   color: var(--color-background);
@@ -224,12 +232,32 @@
 .mobileLogin:hover {
   color: var(--color-secondary-hover);
 }
+.mobileContribute {
+  font-size: 2rem;
+  font-family: var(--font-sans);
+  color: var(--color-secondary);
+  text-decoration: none;
+  z-index: 5;
+  transition: color .2s;
+  margin-bottom: 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .nav__a,
+  .right__a {
+    font-size: 1.4rem;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .headerDesktop {
     display: none;
   }
   .headerMobile {
     display: flex;
+  }
+  .nav__a,
+  .right__a {
+    font-size: 1.6rem;
   }
 }
 

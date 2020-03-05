@@ -1,29 +1,12 @@
-import { useRef, useEffect } from "react";
+import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 
 import styles from "./Map.module.css";
 
-function Map() {
-  const mapRef = useRef();
-
-  useEffect(() => {
-    if (process.browser) {
-      const map = new window.google.maps.Map(mapRef.current, {
-        center: {
-          lat: 29.5536369,
-          lng: 106.5712369
-        },
-        zoom: 17
-      });
-
-      new window.google.maps.Marker({
-        position: {
-          lat: 29.5536369,
-          lng: 106.5712369
-        },
-        map: map
-      });
-    }
-  }, []);
+function MyMap(props) {
+  const mapStyles = {
+    width: "100%",
+    height: "100%"
+  };
 
   return (
     <section className={styles.container}>
@@ -63,10 +46,21 @@ function Map() {
             </p>
           </div>
         </div>
-        <div className={styles.map} ref={mapRef}></div>
+        <div className={styles.map}>
+          <Map
+            google={props.google}
+            zoom={17}
+            style={mapStyles}
+            initialCenter={{ lat: 29.5536369, lng: 106.5712369 }}
+          >
+            <Marker position={{ lat: 29.5536369, lng: 106.5712369 }} />
+          </Map>
+        </div>
       </div>
     </section>
   );
 }
 
-export default Map;
+export default GoogleApiWrapper({
+  apiKey: "AIzaSyAMo6Ueuw_-IAlPGLZoN8rSTaqlB6ysj7Y"
+})(MyMap);

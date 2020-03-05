@@ -1,12 +1,12 @@
-import Layout from "../components/Layout";
+import BlogLayout from "../components/BlogLayout";
 import Blog from "../components/blog/Blog";
 
 function blog() {
   return (
     <div>
-      <Layout>
+      <BlogLayout>
         <Blog />
-      </Layout>
+      </BlogLayout>
     </div>
   );
 }

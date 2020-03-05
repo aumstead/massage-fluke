@@ -17,7 +17,7 @@
   align-self: center;
 }
 
-.backgroundRight{
+.backgroundRight {
   height: 35rem;
   width: 50rem;
   grid-column: 3 / 5;
@@ -71,17 +71,20 @@
   text-align: end;
 }
 
+.cta__a {
+  font-size: 1.6rem;
+  text-decoration: none;
+}
 .cta {
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-background);
   color: var(--color-primary);
   background-color: var(--color-background);
   padding: 1rem 3rem;
-  font-size: 1.6rem;
-  text-decoration: none;
   margin-top: 1.5rem;
   display: block;
   width: max-content;
-  transition: all .2s;
+  transition: all 0.2s;
+  border-radius: 3px;
 }
 .cta:hover {
   cursor: pointer;
@@ -147,7 +150,7 @@
     margin-left: 1rem;
     text-align: center;
   }
-  
+
   .backgroundLeft {
     height: max-content;
     width: unset;
@@ -175,25 +178,9 @@
     font-size: 1.6rem;
     text-align: center;
   }
-  
   .cta {
-    border: 1px solid var(--color-primary);
-    color: var(--color-primary);
-    background-color: var(--color-background);
-    padding: 1rem 3rem;
-    font-size: 1.6rem;
-    text-decoration: none;
     margin: 0 auto;
-    margin-top: 1.5rem;
-    display: block;
-    width: max-content;
-    transition: all .2s;
-  }
-  .cta:hover {
-    cursor: pointer;
-    background-color: var(--color-primary);
-    color: var(--color-background);
-    border: 1px solid var(--color-background);
+    margin-top: 2rem;
   }
 }
 

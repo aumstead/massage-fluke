@@ -1,0 +1,44 @@
+.container {
+  max-width: 800px;
+  margin: 6rem auto;
+}
+.title {
+  font-size: 3.5rem;
+  color: var(--color-primary);
+  font-family: var(--font-serif);
+  margin-right: 3rem;
+  transition: color .2s;
+  display: inline;
+}
+.title:hover {
+  cursor: pointer;
+  color: var(--color-hover);
+}
+
+.author {
+  font-size: 1.6rem;
+}
+
+.date {
+  font-size: 1.6rem;
+  color: darkgray;
+  font-style: italic;
+}
+.dateContainer {
+  display: flex;
+}
+.excerpt {
+  font-size: 1.6rem;
+  color: gray;
+}
+
+.readMore {
+  color: var(--color-secondary);
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+.readMore:hover {
+  text-decoration: underline;
+}
+
+

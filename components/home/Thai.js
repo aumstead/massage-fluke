@@ -21,7 +21,7 @@ function Thai() {
               Massage therapy for rest and relaxation
             </p>
             <Link href="/treatments#thaiOil">
-              <a className={styles.cta}>Read more</a>
+              <button className={styles.cta}><a className={styles.cta__a}>Read more</a></button>
             </Link>
           </div>
         </div>

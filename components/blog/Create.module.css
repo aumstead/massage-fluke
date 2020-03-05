@@ -1,0 +1,86 @@
+.space {
+  padding-top: 15vh;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0rem 3rem;
+}
+.h1 {
+  font-size: 3rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  display: block;
+  text-align: center;
+}
+
+.labelTitle {
+  font-size: 1.6rem;
+  color: darkgray;
+}
+.input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #cccccc;
+  background-color: var(--color-background);
+  margin-bottom: 1.6rem;
+  font-size: 1.4rem;
+}
+.input:focus {
+  outline: none;
+}
+.inputTitle {
+  margin-bottom: 1.6rem;
+}
+.imageContainer {
+  margin-top: 1rem;
+  margin-bottom: 2.4rem;
+}
+.uploadImage {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: darkgray;
+}
+.imagePreviewContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: max-content;
+  align-items: flex-end;
+}
+.imagePreview {
+  max-width: 25rem;
+  display: block;
+}
+.deleteBtn {
+  display: block;
+  border: none;
+  color: blue;
+  width: fit-content;
+  margin-top: .5rem;
+  transition: all .2s;
+}
+.deleteBtn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.buttonPublish {
+  padding: 1rem 3rem;
+  color: var(--color-background);
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 3px;
+  transition: all .2s;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+.buttonPublish:hover {
+  cursor: pointer;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+.bottomMargin {
+  margin-bottom: 15rem;
+}

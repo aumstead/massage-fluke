@@ -1,14 +1,14 @@
 import FirebaseProvider from "../../firebase/FirebaseProvider";
 import Create from "../../components/blog/Create";
-import Layout from "../../components/Layout";
+import BlogLayout from "../../components/BlogLayout";
 
 function create(props) {
   return (
-    <Layout>
+    <BlogLayout>
       <FirebaseProvider>
         <Create />
       </FirebaseProvider>
-    </Layout>
+    </BlogLayout>
   );
 }
 

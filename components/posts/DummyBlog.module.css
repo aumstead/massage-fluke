@@ -1,0 +1,14 @@
+.dummy__image {
+  max-width: 500px;
+  max-height: 400px;
+  margin: 3rem auto;
+  display: block;
+  background-color: #eaeceb;
+}
+
+.dummy__title {
+  margin: 3rem auto;
+  width: 20rem;
+  height: 5rem;
+  display: block;
+}

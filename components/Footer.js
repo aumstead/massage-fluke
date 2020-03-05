@@ -91,7 +91,7 @@ const Footer = props => {
         </div>
       </div>
 
-      <img className={styles.logo} src="/images/massagefluke.png" alt="logo" />
+      {/* <img className={styles.logo} src="/images/massagefluke.png" alt="logo" /> */}
 
       <div className={styles.bottomContainer}>
         <div className={styles.bottomContent}>

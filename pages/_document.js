@@ -10,11 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <script
-            async
-            defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMo6Ueuw_-IAlPGLZoN8rSTaqlB6ysj7Y"
-          ></script>
+          <link rel="stylesheet" href="//cdn.quilljs.com/1.2.6/quill.snow.css"/>
           <link
             href="https://fonts.googleapis.com/css?family=Red+Hat+Text:400,700&display=swap"
             rel="stylesheet"

@@ -15,7 +15,10 @@
 }
 
 .map {
+  grid-column: 2;
+  width: 50vw;
   height: 100%;
+  position: relative;
 }
 .content {
   background-color: var(--color-light-gray);
@@ -75,5 +78,6 @@
   }
   .map {
     height: 100vw;
+    width: 100vw;
   }
 }

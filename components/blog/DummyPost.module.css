@@ -1,0 +1,24 @@
+.container {
+  max-width: 800px;
+  margin: 6rem auto;
+  border: 1px solid #eaeceb;
+  border-radius: 3px;
+}
+.h3 {
+  width: 8rem;
+  height: 2rem;
+  background-color: #eaeceb;
+  margin: 1rem;
+}
+.p {
+  width: 4rem;
+  height: 1.4rem;
+  background-color: #eaeceb;
+  margin: 1rem;
+}
+.excerpt {
+  width: 90%;
+  height: 1.4rem;
+  background-color: #eaeceb;
+  margin: 1rem;
+}
