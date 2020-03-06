@@ -5,6 +5,7 @@ import Services from '../Services'
 import Thai from './Thai'
 import Pets from './Pets'
 import Map from './Map'
+import Consultation from './Consultation'
 import Footer from '../Footer'
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
       <Services showHeading={true} />
       <Pets />
       <Map />
+      <Consultation />
       <Footer />
     </main>
   )
