@@ -6,8 +6,8 @@ const index = () => {
   return (
     <div className="container">
       <Head>
-        <title>Karen's Bowen</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Massage Fluke</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Layout>
         <Home />

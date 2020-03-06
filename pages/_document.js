@@ -8,9 +8,18 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          <link rel="stylesheet" href="//cdn.quilljs.com/1.2.6/quill.snow.css"/>
+          <meta charSet="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <meta name="description" content="Massage Fluke - Bowen and Thai Massage" />
+          <link
+            rel="stylesheet"
+            href="//cdn.quilljs.com/1.2.6/quill.snow.css"
+          />
           <link
             href="https://fonts.googleapis.com/css?family=Red+Hat+Text:400,700&display=swap"
             rel="stylesheet"
@@ -19,6 +28,9 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Quando&display=swap"
             rel="stylesheet"
           ></link>
+
+          <title>Massage Fluke</title>
+          <link rel="icon" href="/favicon.png" />
         </Head>
         <body>
           <Main />
