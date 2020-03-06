@@ -50,6 +50,20 @@
   background-color: var(--color-background);
   cursor: pointer;
 }
+.button__disabled {
+  background-color: #74bfb3;
+  border: 1px solid #74bfb3;
+  display: block;
+  width: 80%;
+  margin: 2rem auto;
+  border-radius: 3px;
+  color: var(--color-background);
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+.button__disabled:hover {
+  cursor: progress;
+}
 /* ////////////////////////////////////// */
 /* targeted */
 /* ////////////////////////////////////// */

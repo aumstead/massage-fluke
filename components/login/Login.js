@@ -12,12 +12,13 @@ function Login() {
   // see if user is logged in and if so push to /blog/create
   firebase.auth.onAuthStateChanged(function(user) {
     if (user) {
-      router.push('/blog/create')
-    } 
+      router.push("/blog/create");
+    }
   });
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setSubmitting] = useState(false);
+  const [loggingIn, setLoggingIn] = useState(false);
   const [values, setValues] = useState({
     email: "",
     password: ""
@@ -29,7 +30,7 @@ function Login() {
       const noErrors = Object.keys(errors).length === 0;
       if (noErrors) {
         authenticateUser();
-        setSubmitting(false);
+        
       } else {
         setSubmitting(false);
       }
@@ -39,11 +40,13 @@ function Login() {
   async function authenticateUser() {
     const { email, password } = values;
     try {
-      await firebase.login(email, password)
+      await firebase.login(email, password);
+      setSubmitting(false);
       router.push("/blog/create");
     } catch (error) {
       console.error("Authentication error", error);
       setFirebaseError(error.message);
+      setSubmitting(false);
     }
   }
 
@@ -71,6 +74,7 @@ function Login() {
     const validationErrors = validateLogin(values);
     setErrors(validationErrors);
     setSubmitting(true);
+    setLoggingIn(true);
   }
 
   function handleChange(event) {
@@ -85,7 +89,9 @@ function Login() {
       <div className={styles.space}></div>
       <h2 className={styles.h2}>Login</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <p className={`${styles.text} ${styles.enter}`}>Enter your email address and password.</p>
+        <p className={`${styles.text} ${styles.enter}`}>
+          Enter your email address and password.
+        </p>
         <input
           type="email"
           name={"email"}
@@ -105,12 +111,14 @@ function Login() {
         />
         {errors.password && <p className={styles.error}>{errors.password}</p>}
         {firebaseError && <p className={styles.error}>{firebaseError}</p>}
-        <Link href='/forgot'><a className={styles.forgot}>Forgot your password?</a></Link>
+        <Link href="/forgot">
+          <a className={styles.forgot}>Forgot your password?</a>
+        </Link>
         <div>
           <button
             type="submit"
             disabled={isSubmitting}
-            className={styles.button}
+            className={isSubmitting ? styles.button__disabled : styles.button}
           >
             Submit
           </button>
@@ -120,7 +128,6 @@ function Login() {
               <a className={styles.link}>Sign up</a>
             </Link>
           </p>
-          
         </div>
       </form>
     </div>

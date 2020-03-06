@@ -5,12 +5,12 @@ import Link from "next/link";
 import styles from "./Post.module.css";
 
 const Post = props => {
-  const { queryId, queryTitle } = props;
-
+  const { id } = props;
   const [post, setPost] = useState([]);
   const [havePost, setHavePost] = useState(false);
+  const [error, setError] = useState(false)
 
-  const { imageUrl, body, author, date } = post;
+  const { imageUrl, body, author, date, title } = post;
 
   useEffect(() => {
     getPost();
@@ -19,7 +19,7 @@ const Post = props => {
   const getPost = async () => {
     return firebase.db
       .collection("posts")
-      .doc(queryId)
+      .doc(id)
       .get()
       .then(handleSnapshot);
   };
@@ -31,10 +31,10 @@ const Post = props => {
       setHavePost(true);
     } else {
       // doc.data() will be undefined in this case
-      console.log("No such document!");
+      setError(true)
     }
   };
-
+  
   const markup = {
     __html: body
   };
@@ -42,15 +42,16 @@ const Post = props => {
   return (
     <main className={styles.container}>
       <div className={styles.space}></div>
+      {error && <p className={styles.error}>Error retrieving data. Please go back and try again.</p>}
       {!havePost ? (
         <div className={styles.dummy__image}></div>
       ) : (
-        <img className={styles.image} src={imageUrl} alt="user uploaded" />
+        imageUrl && <img className={styles.image} src={imageUrl} alt="user uploaded" />
       )}
       {!havePost ? (
         <div className={styles.dummy__title}></div>
       ) : (
-        <h1 className={styles.h1}>{queryTitle}</h1>
+        <h1 className={styles.h1}>{title}</h1>
       )}
 
       {!havePost ? (

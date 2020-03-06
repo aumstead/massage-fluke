@@ -14,14 +14,14 @@ const PostLink = ({ title, author, date, body, id }) => {
 
   return (
     <div className={styles.container}>
-      <Link href={`/posts/[title]?id=${id}`} as={`/posts/${title}`}>
+      <Link href={`/blog/post?id=${id}`}>
         <h3 className={styles.title}>{title}</h3>
       </Link>
       <p className={styles.date}>{date}</p>
       <p className={styles.author}>Contributed by {author}</p>
 
       <p className={styles.excerpt}>{excerpt}</p>
-      <Link href={`/posts/[title]?id=${id}`} as={`/posts/${title}`}>
+      <Link href={`/blog/post?id=${id}`}>
         <a className={styles.readMore}>Read more...</a>
       </Link>
     </div>

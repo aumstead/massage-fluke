@@ -30,7 +30,6 @@ const Signup = () => {
       const noErrors = Object.keys(errors).length === 0;
       if (noErrors) {
         authenticateUser();
-        setSubmitting(false);
       } else {
         setSubmitting(false);
       }
@@ -42,9 +41,11 @@ const Signup = () => {
     try {
       await firebase.register(name, email, password);
       router.push("/blog/create");
+      setSubmitting(false);
     } catch (error) {
       console.error("Authentication error", error);
       setFirebaseError(error.message);
+      setSubmitting(false);
     }
   }
 
@@ -63,7 +64,7 @@ const Signup = () => {
     } else if (values.password.length < 6) {
       errors.password = "Password must be at least 6 characters.";
     } else if (values.password !== values.passwordConfirm) {
-      errors.password = "Passwords do not match."
+      errors.password = "Passwords do not match.";
     }
 
     return errors;
@@ -125,7 +126,12 @@ const Signup = () => {
         />
         {errors.password && <p className={styles.error}>{errors.password}</p>}
         {firebaseError && <p className={styles.error}>{firebaseError}</p>}
-        <button type="submit" disabled={isSubmitting} className={styles.button} style={{marginTop: '3rem'}}>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className={isSubmitting ? styles.button__disabled : styles.button}
+          style={{ marginTop: "3rem" }}
+        >
           Submit
         </button>
         <p className={`${styles.text} ${styles.signup}`}>

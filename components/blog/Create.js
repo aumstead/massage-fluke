@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import firebase from "../../firebase/firebase";
 import dynamic from "next/dynamic";

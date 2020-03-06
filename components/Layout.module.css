@@ -218,10 +218,19 @@
   background-color: var(--color-background);
   cursor: pointer;
 }
-
-.mobileLogin {
+.mobileWritePost {
   margin-top: 2rem;
   margin-bottom: 4rem;
+  font-size: 2rem;
+  font-family: var(--font-sans);
+  color: var(--color-secondary);
+  text-decoration: none;
+  z-index: 5;
+  transition: color .2s;
+}
+.mobileLogin {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-size: 2rem;
   font-family: var(--font-sans);
   color: var(--color-secondary);

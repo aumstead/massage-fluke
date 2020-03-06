@@ -17,12 +17,14 @@
 
 .author {
   font-size: 1.6rem;
+  margin-top: .5rem;
 }
 
 .date {
   font-size: 1.6rem;
   color: darkgray;
   font-style: italic;
+  margin-top: .5rem;
 }
 .dateContainer {
   display: flex;
@@ -30,6 +32,8 @@
 .excerpt {
   font-size: 1.6rem;
   color: gray;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 
 .readMore {

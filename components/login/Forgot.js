@@ -2,8 +2,11 @@ import styles from "./Login.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import firebase from "../../firebase";
+import {useRouter} from 'next/router'
 
 const Forgot = () => {
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [isSubmitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
@@ -11,10 +14,12 @@ const Forgot = () => {
 
   const handleResetPassword = async e => {
     e.preventDefault();
+    setSubmitting(true)
     try {
       await firebase.resetPassword(email);
       setIsPasswordReset(true);
       setError(null);
+      router.push('/forgot/sent')
     } catch (err) {
       console.error("Error sending email", err);
       setError(err.message);
@@ -46,7 +51,7 @@ const Forgot = () => {
         <div>
           <button
             disabled={isSubmitting}
-            className={styles.button}
+            className={isSubmitting ? styles.button__disabled : styles.button}
             onClick={handleResetPassword}
           >
             Send Password Reset Email

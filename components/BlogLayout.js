@@ -1,14 +1,17 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
-import useAuth from "../components/auth/useAuth";
 import firebase from "../firebase/firebase";
+import { useState } from "react";
 
 import styles from "./Layout.module.css";
 
 const BlogLayout = ({ children }) => {
-  const router = useRouter();
-
-  const user = useAuth();
+  const [user, setUser] = useState(false);
+  // see if user is logged in
+  firebase.auth.onAuthStateChanged(function(user) {
+    if (user) {
+      setUser(true);
+    }
+  });
 
   return (
     <div className={styles.layoutContainer}>

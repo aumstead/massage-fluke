@@ -7,15 +7,23 @@ import styles from "./BlogList.module.css";
 const BlogList = () => {
   const [posts, setPosts] = useState([]);
   const [havePosts, setHavePosts] = useState(false);
+  const [error, setError] = useState(false);
+
   useEffect(() => {
     getPosts();
   }, []);
 
   const getPosts = () => {
-    firebase.db
+    try {
+      firebase.db
       .collection("posts")
       .get()
       .then(handleSnapshot);
+    } catch (error) {
+      console.log(error)
+      setError(true)
+    }
+    
   };
 
   const handleSnapshot = snapshot => {
@@ -32,6 +40,7 @@ const BlogList = () => {
     <section className={styles.container}>
       <h2 className={styles.h2}>Massage Fluke Blog</h2>
       <div className={styles.blogs}>
+        {error && <p className={styles.error}>Error retrieving data. Please go back and try again.</p>}
         {!havePosts && (
           <>
             <DummyPost />
@@ -39,7 +48,9 @@ const BlogList = () => {
             <DummyPost />
           </>
         )}
-        {posts.map(post => {
+        {posts.sort((a, b) => {
+          return b.createdAt - a.createdAt
+        }).map(post => {
           return (
             <PostLink
               title={post.title}

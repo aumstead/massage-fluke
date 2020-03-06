@@ -89,7 +89,7 @@ function Layout({ children }) {
                 </Link>
               ) : (
                 <Link href="/blog">
-                  <a className={styles.mobileLogin}>Write a blog post!</a>
+                  <a className={styles.mobileWritePost}>Write a blog post!</a>
                 </Link>
               )}
 
