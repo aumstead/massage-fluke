@@ -11,6 +11,7 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .content {
@@ -49,7 +50,7 @@
   margin: 0 auto;
   margin-top: 4rem;
   display: block;
-  transition: all .2s;
+  transition: all 0.2s;
   border-radius: 3px;
 }
 .button:hover {
@@ -60,7 +61,7 @@
 .button__a {
   color: var(--color-background);
   text-decoration: none;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 .button:hover .button__a {
   color: var(--color-primary);

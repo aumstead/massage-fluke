@@ -1,4 +1,4 @@
-import ThaiIcon from '../icons/ThaiIcon'
+import ThaiIcon from "../icons/ThaiIcon";
 import styles from "./InfoIcons.module.css";
 
 function InfoIcons() {
@@ -26,7 +26,7 @@ function InfoIcons() {
         </div>
         <div className={styles.card}>
           <h3 className={styles.heading}>Relax the Body</h3>
-          <ThaiIcon height='60' width='60' />
+          <ThaiIcon height="60" width="60" />
           <h3 className={styles.h3}>Thai Massage</h3>
           <p className={styles.text}>
             Thai massage is an ancient style of massage dating back to more than
@@ -51,9 +51,10 @@ function InfoIcons() {
           </svg>
           <h3 className={styles.h3}>Meditation</h3>
           <p className={styles.text}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            sint quisquam aliquid, minima voluptas, dolorum rerum ut corporis
-            quas voluptates magni fugit voluptatum qui quasi?
+            By allowing our brain to shut out all the chatter, we have an
+            opportunity to change the way we see and respond to the world
+            because we create a ‘breathing space’ mind, which acts as a rest
+            button.
           </p>
         </div>
       </div>
