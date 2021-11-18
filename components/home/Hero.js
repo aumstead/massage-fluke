@@ -6,11 +6,15 @@ function Hero() {
       <div className={heroStyles.background}></div>
       <div className={heroStyles.left}>
         <div className={heroStyles.leftContent}>
-          <h1 className={heroStyles.h1}>Karen Bayley</h1>
+          <h1 className={heroStyles.h1}>OTworkplay</h1>
           <p className={heroStyles.subheading}>
-            Bowen and Massage Specialist
+            Occupational Therapy and well-being. Living life to the fullest.
           </p>
-          <img className={heroStyles.photo} src="/images/profile.jpg" alt="Karen"/>
+          <img
+            className={heroStyles.photo}
+            src="/images/profile.jpg"
+            alt="Karen"
+          />
           <button className={heroStyles.cta}>Book an appointment!</button>
         </div>
       </div>

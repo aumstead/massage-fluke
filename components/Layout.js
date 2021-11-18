@@ -49,10 +49,6 @@ function Layout({ children }) {
           </ul>
         </nav>
         <div className={styles.right}>
-          <Link href="/blog">
-            <a className={styles.right__a}>Write a blog post!</a>
-          </Link>
-
           <Link href="">
             <button className={styles.button}>
               <a className={styles.button__a}>Book now &#8594;</a>
