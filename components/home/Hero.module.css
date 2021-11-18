@@ -5,13 +5,13 @@
 .background {
   grid-column: 1;
   grid-row: 1;
-  min-height: 100vh;
+  min-height: 70vh;
   background-color: white;
-  background-image: url('/images/back1.jpg');
+  background-image: url("/images/back1.jpg");
   background-size: cover;
   background-position: 90% 50%;
   background-blend-mode: luminosity;
-  opacity: .3;
+  opacity: 0.3;
   z-index: -1;
 }
 .left {
@@ -21,7 +21,6 @@
   grid-template-rows: 25% 1fr;
   justify-content: center;
   text-align: center;
-  
 }
 .leftContent {
   grid-row: 2;
@@ -65,9 +64,6 @@
   color: var(--color-primary);
   background-color: transparent;
 }
-.right {
-  grid-column: 2;
-}
 
 @media (orientation: portrait) {
   .background {
@@ -75,11 +71,11 @@
     grid-row: 1; */
     min-height: 75vh;
     background-color: white;
-    background-image: url('/images/back1.jpg');
+    background-image: url("/images/back1.jpg");
     background-size: cover;
     background-position: 90% 50%;
     background-blend-mode: luminosity;
-    opacity: .3;
+    opacity: 0.3;
     z-index: -1;
   }
 }

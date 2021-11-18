@@ -32,7 +32,7 @@ function Layout({ children }) {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/meditation">
                 <a className={styles.nav__a}>Meditation</a>
               </Link>
             </li>
@@ -41,11 +41,11 @@ function Layout({ children }) {
                 <a className={styles.nav__a}>Learn to Give Massage</a>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/blog">
                 <a className={styles.nav__a}>Community</a>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <div className={styles.right}>
@@ -79,15 +79,6 @@ function Layout({ children }) {
                   <a className={styles.mobileBtn__a}>Book now &#8594;</a>
                 </button>
               </Link>
-              {router.pathname === "/blog" ? (
-                <Link href="/">
-                  <a className={styles.mobileLogin}>Sign in</a>
-                </Link>
-              ) : (
-                <Link href="/blog">
-                  <a className={styles.mobileWritePost}>Write a blog post!</a>
-                </Link>
-              )}
 
               <ul className={styles.mobileNav__ul}>
                 <li>
@@ -103,7 +94,7 @@ function Layout({ children }) {
                 </li>
                 <hr className={styles.mobileNav__hr}></hr>
                 <li>
-                  <Link href="">
+                  <Link href="/mediation">
                     <a className={styles.mobileNav__a}>Meditation</a>
                   </Link>
                 </li>

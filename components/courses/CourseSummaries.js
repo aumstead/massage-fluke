@@ -118,16 +118,16 @@ const CourseSummaries = () => {
 
       <div className={styles.section__thaiSpa}>
         <a className={styles.anchor} id="section__thaiSpa"></a>
-        <h3 className={styles.h3}>Thai Spa Oil Massage</h3>
+        <h3 className={styles.h3}>Traditional Oil Massage</h3>
         <p className={styles.text}>
-          Thai Spa Oil massage uses flowing massage movements alongside gentle
-          stretching techniques making it very different from other massage
-          therapies practiced today. Emphasis is put on re-balancing the energy
-          within the body, strokes are long and rhythmic. This treatment is not
-          only wonderfully relaxing but also beneficial in relieving aching
-          muscles from the body without causing pain to the receiver. Clients
-          often report to experience a feeling of floating and the therapist
-          having "many hands".
+          Traditional Oil massage uses flowing massage movements alongside
+          gentle stretching techniques making it very different from other
+          massage therapies practiced today. Emphasis is put on re-balancing the
+          energy within the body, strokes are long and rhythmic. This treatment
+          is not only wonderfully relaxing but also beneficial in relieving
+          aching muscles from the body without causing pain to the receiver.
+          Clients often report to experience a feeling of floating and the
+          therapist having "many hands".
         </p>
         <br />
         <h4 className={styles.h4}>Benefits</h4>
@@ -164,7 +164,7 @@ const CourseSummaries = () => {
           </li>
           <li className={styles.li}>Basic Thai breathing exercises</li>
         </ul>
-        <br/>
+        <br />
         <p className={styles.text}>
           The course lasts for 3 days and will consist of 2 days intensive
           followed by a 3rd day 1 to 6 weeks later. This allows the student to
@@ -247,12 +247,13 @@ const CourseSummaries = () => {
             Use the energy in a positive way to enhance your life
           </li>
         </ul>
-        <br/>
+        <br />
         <p className={styles.text}>
           After successful completion of Reiki 1, we recommend students to use
           the healing and practice giving treatments for a while before
           embarking on the 2nd and 3rd levels.
-          <br /><br/>
+          <br />
+          <br />
           Students can either use the method to heal themselves or others. It
           also goes perfectly with almost all holistic therapy treatments.
         </p>
@@ -299,93 +300,6 @@ const CourseSummaries = () => {
           and chakras. Two days intensive course, plus one day for the practical
           exam, plus 15 full case studies.
         </p>
-        <br />
-        <br />
-      </div>
-
-      <div className={styles.section__acupressure}>
-        <a className={styles.anchor} id="section__acupressure"></a>
-        <h3 className={styles.h3}>Acupressure Face Treatment</h3>
-        <p className={styles.text}>
-          This treatment mainly focuses on the face but also covers the neck,
-          shoulders and upper arm. It can be used on its own or as part of an
-          existing routine such as Hopi Ear Candles, beauty facial routines and
-          so on. It uses the principles behind Thai Yoga massage of pressing
-          special points around the facial area to stimulate its reflex zones.
-        </p>
-        <br />
-        <h4 className={styles.h4}>Benefits</h4>
-        <ul className={styles.ul}>
-          <li className={styles.li}>
-            Encourages fresh blood to the surface to help improve skin tone
-            especially around the face and upper body area
-          </li>
-          <li className={styles.li}>Helps with maintaining sinus flow</li>
-          <li className={styles.li}>
-            Eases tension for the upper body and can help to relieve headaches
-          </li>
-          <li className={styles.li}>
-            Stimulates reflex points around the facial area which are linked to
-            the whole body
-          </li>
-          <li className={styles.li}>
-            No creams or oils are used making this treatment very versatile and
-            mobile
-          </li>
-        </ul>
-        <br />
-        <h4 className={styles.h4}>What will I learn on the day?</h4>
-        <p className={styles.text} style={{ marginBottom: "1rem" }}>
-          Apart from the standard components of all our courses as outlined
-          above, you will learn how to:
-        </p>
-        <ul className={styles.ul}>
-          <li className={styles.li}>
-            Stimulate reflex zones around the face using acupressure movements
-          </li>
-          <li className={styles.li}>
-            Learn about how the reflex points on the face correlate to which
-            parts of the body
-          </li>
-          <li className={styles.li}>
-            Perform a routine that will last for approximately 40 minutes
-          </li>
-          <li className={styles.li}>Client care</li>
-          <li className={styles.li}>Basic Anatomy relating to the course</li>
-          <li className={styles.li}>Sen lines relating to the upper body</li>
-          <li className={styles.li}>1 day and 10 case studies</li>
-        </ul>
-        <br />
-        <h4 className={styles.h4}>What next?</h4>
-        <p className={styles.text}>
-          Upon successful completion, students could use the routine as a
-          standalone treatment or combine it with other treatments such as Thai
-          Foot massage, Hot herbal compress, beauty facial routines or even
-          Reiki.
-        </p>
-        <br />
-        <h4 className={styles.h4}>Why learn this course?</h4>
-        <ul className={styles.ul}>
-          <li className={styles.li}>
-            The treatment is a great routine to learn whether you are a beauty
-            therapist, Holistic therapist or complete beginner.
-          </li>
-          <li className={styles.li}>
-            It requires using Acupressure movements so there is less pressure on
-            your hands preventing repetitive strain syndrome.
-          </li>
-          <li className={styles.li}>
-            It is a very versatile and portable treatment
-          </li>
-          <li className={styles.li}>
-            It requires no special equipment and does not use oil or take up
-            much space to practice it
-          </li>
-          <li className={styles.li}>It is fully insurable and accredited</li>
-          <li className={styles.li}>
-            It is a treatment that complements other routines well
-          </li>
-        </ul>
         <br />
         <br />
       </div>

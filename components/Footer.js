@@ -5,9 +5,9 @@ import WechatSvg from "./icons/WechatSvg";
 import LocationMarkerSvg from "./icons/LocationMarkerSvg";
 import Link from "next/link";
 
-const Footer = props => {
+const Footer = (props) => {
   return (
-    <footer className={styles.container} style={{marginTop: props.marginTop}}>
+    <footer className={styles.container} style={{ marginTop: props.marginTop }}>
       <div className={styles.grid}>
         <div className={styles.contactContainer}>
           <h2 className={styles.heading}>Contact</h2>
@@ -30,7 +30,7 @@ const Footer = props => {
               href="mailto:massagefluke@yahoo.com?Subject=Hello%20Massage%20Fluke!"
               target="_top"
             >
-              massagefluke@yahoo.com
+              bayleykaren@yahoo.com
             </a>
           </div>
           <div className={styles.wechatContainer}>

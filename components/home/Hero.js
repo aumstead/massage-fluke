@@ -18,7 +18,6 @@ function Hero() {
           <button className={heroStyles.cta}>Book an appointment!</button>
         </div>
       </div>
-      <div className={heroStyles.right}></div>
     </div>
   );
 }

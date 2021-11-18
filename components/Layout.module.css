@@ -6,7 +6,7 @@
   background-color: var(--color-background);
   z-index: 500;
   position: fixed;
-  box-shadow: 0 2px 8px rgba(0,0,0,.26);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 .nav__ul {
   height: 100%;
@@ -22,7 +22,7 @@
   color: var(--color-primary);
   text-decoration: none;
   z-index: 5;
-  transition: color .2s;
+  transition: color 0.2s;
   margin-left: 4rem;
 }
 .nav__a:hover {
@@ -35,7 +35,7 @@
 }
 .logoImage {
   height: 6rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 .right {
   display: flex;
@@ -48,7 +48,7 @@
   color: var(--color-secondary);
   text-decoration: none;
   z-index: 5;
-  transition: color .2s;
+  transition: color 0.2s;
 }
 .right__a:hover {
   color: var(--color-secondary-hover);
@@ -64,15 +64,15 @@
 .button__a {
   text-decoration: none;
   color: var(--color-background);
-  transition: color .2s;
+  transition: color 0.2s;
 }
 .button {
-  padding: .7rem 2rem;
+  padding: 0.7rem 2rem;
   margin-right: 3rem;
   font-size: 1.6rem;
   background-color: var(--color-secondary);
   border: 1px solid var(--color-secondary);
-  transition: color .2s;
+  transition: color 0.2s;
   border-radius: 3px;
 }
 .button:hover .button__a {
@@ -176,6 +176,7 @@
 }
 .mobileNav__ul {
   list-style: none;
+  margin-top: 5rem;
 }
 .mobileNav__a {
   text-decoration: none;
@@ -201,14 +202,14 @@
 .mobileBtn__a {
   text-decoration: none;
   color: var(--color-background);
-  transition: color .2s;
+  transition: color 0.2s;
 }
 .mobileBtn {
   padding: 1rem 2rem;
   font-size: 2rem;
   background-color: var(--color-secondary);
   border: 1px solid var(--color-secondary);
-  transition: color .2s;
+  transition: color 0.2s;
   border-radius: 3px;
 }
 .mobileBtn:hover .mobileBtn__a {
@@ -226,7 +227,7 @@
   color: var(--color-secondary);
   text-decoration: none;
   z-index: 5;
-  transition: color .2s;
+  transition: color 0.2s;
 }
 .mobileLogin {
   margin-top: 2rem;
@@ -236,7 +237,7 @@
   color: var(--color-secondary);
   text-decoration: none;
   z-index: 5;
-  transition: color .2s;
+  transition: color 0.2s;
 }
 .mobileLogin:hover {
   color: var(--color-secondary-hover);
@@ -247,7 +248,7 @@
   color: var(--color-secondary);
   text-decoration: none;
   z-index: 5;
-  transition: color .2s;
+  transition: color 0.2s;
   margin-bottom: 4rem;
 }
 @media only screen and (max-width: 1200px) {

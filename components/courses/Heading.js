@@ -10,12 +10,12 @@ const Heading = () => {
           <ul className={styles.ul}>
             <li className={styles.li}>
               <a className={styles.a} href="#section__thaiFoot">
-                Thai Foot Massage
+                Thai Foot Massage Level 1&amp;2
               </a>
             </li>
             <li className={styles.li}>
               <a className={styles.a} href="#section__thaiSpa">
-                Thai Spa Oil Massage
+                Traditional Oil Massage
               </a>
             </li>
             <li className={styles.li}>
@@ -30,7 +30,8 @@ const Heading = () => {
             </li>
             <li className={styles.li}>
               <a className={styles.a} href="#section__acupressure">
-                Acupressure Face
+                Email for additional Occupational Therapy activities, Relaxation
+                workshops and Reiki shares.
               </a>
             </li>
           </ul>
@@ -41,8 +42,9 @@ const Heading = () => {
             studied herself in places like Thailand and Japan!
           </p>
           <p className={styles.quote}>
-            Karen is a fantastic teacher and clearly puts in the time and effort to be the best teacher she can be. Her
-            experience living and studying in Asia so unique and fascinating!
+            Karen is a fantastic teacher and clearly puts in the time and effort
+            to be the best teacher she can be. Her experience living and
+            studying in Asia so unique and fascinating!
             <br />
             <br />— Paul Cassidy
           </p>
